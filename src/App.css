@@ -1,1 +1,4 @@
-// class names for styles used in the app
+.desserts {
+  display: flex;
+  flex-direction: row;
+}
