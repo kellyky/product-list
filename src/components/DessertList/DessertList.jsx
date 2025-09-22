@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import DessertItem from './components/DessertItem'
 
 const DessertList = () => {
   const [data, setData] = useState(null)
@@ -26,8 +27,6 @@ const DessertList = () => {
     fetchData()
   }, [])
 
-  const desserts = JSON.stringify(data)
-
   if (loading) {
     return <p>loading</p>
   }
@@ -39,7 +38,20 @@ const DessertList = () => {
   return (
     <div>
       <h1>Desserts</h1>
-      {desserts}
+      <ul>
+        {
+          data.map((item) => (
+            <li>
+              <DessertItem
+                image={item.image}
+                category={item.category}
+                name={item.name}
+                price={item.price}
+              />
+            </li>
+          ))
+        }
+      </ul>
     </div>
   )
 }
