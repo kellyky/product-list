@@ -2,8 +2,8 @@ import Button from '../../../common/Button/Button'
 
 const DessertItem = ({image, name, category, price}) => {
   return (
-    <div>
-      <div>
+    <div className='dessert-item'>
+      <div className='dessert-tile'>
         <picture>
           <source media="(min-width:1440px)" srcSet={image.desktop} />
           <source media="(min-width:765px)" srcSet={image.tablet} />
@@ -15,7 +15,7 @@ const DessertItem = ({image, name, category, price}) => {
         />
       </div>
 
-      <div>
+      <div className='dessert-info'>
         <h3>{category}</h3>
         <h2>{name}</h2>
         <span>${price.toFixed(2)}</span>

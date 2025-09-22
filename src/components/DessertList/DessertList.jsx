@@ -38,7 +38,7 @@ const DessertList = () => {
   return (
     <div>
       <h1>Desserts</h1>
-      <ul>
+      <ul className='dessert-list'>
         {
           data.map((item) => (
             <li>

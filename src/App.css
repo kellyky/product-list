@@ -1,4 +1,66 @@
+/* Entire Desserts Page */
 .desserts {
   display: flex;
   flex-direction: row;
+}
+
+.dessert-image {
+  border-radius: 1rem;
+}
+
+/* List of DessertItems */ 
+.dessert-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+  gap: 1rem;
+}
+
+/* Individual DessertItem - image/cart tile */
+.dessert-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Add to cart button position at bottom of tile */
+.dessert-tile button {
+  position: absolute;
+  top: calc(100% - 15px);
+}
+
+/* Individual DessertItem - name/category/price */
+.dessert-info {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.dessert-info h2 {
+  margin: 0;
+  color: var(--rose-900);
+  font-family: RedHatText;
+  line-height: 150%;
+  letter-spacing: 0px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.dessert-info h3 {
+  margin: 0;
+  color: var(--rose-500);
+  font-family: RedHatText;
+  line-height: 150%;
+  letter-spacing: 0px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.dessert-info span {
+  color: var(--red);
+  line-height: 150%;
+  letter-spacing: 0px;
+  font-size: 16px;
+  font-weight: 400;
 }
